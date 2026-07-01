@@ -1,3 +1,19 @@
+#NGrid-Diagnostic-Utility
+
+Problem statement
+
+•	No unified view of service health across HMI and Core machines - teams relied on manual checks on each individual machine.
+
+•	No way to detect if a process is running, stopped, or degraded without logging in locally to each machine.
+
+•	No visibility into duplicate service instances or version mismatches across the two machines.
+
+•	Resource issues (high CPU, memory exhaustion, disk pressure) were discovered only after system failures, with no proactive alerting.
+
+•	Existing OS tools (Task Manager, Resource Monitor) are local-only, produce no structured data, and cannot span two machines simultaneously.
+
+Proposed Solution
+
 •	A centralized desktop monitoring utility is used to monitor both the HMI Machine and Core Machine from a single interface.
 
 •	Each machine runs a lightweight background agent that collects CPU, RAM, Disk I/O, and process-related information.
