@@ -1,0 +1,17 @@
+{
+    "product_name": "Power Plant Controller",
+    "version": "4.5.0",
+    "machines": {
+        "HMI Machine": {
+            "ip_address": "127.0.0.1",
+            "username": "hmi",
+            "password": "hmi123"
+        },
+        "Core Machine": {
+            "ip_address": "127.0.0.1",
+            "username": "core",
+            "password": "core123"
+        }
+    }
+}
+

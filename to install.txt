@@ -1,0 +1,6 @@
+required dependencies:
+    pip install PyQt5 pyqtgraph matplotlib pandas pyarrow psutil grpcio protobuf grpcio-tools
+
+to run monitor.proto:
+    python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. monitor.proto
+

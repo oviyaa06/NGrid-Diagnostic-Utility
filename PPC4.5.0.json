@@ -1,0 +1,76 @@
+{
+    "product_name": "Power Plant Controller",
+    "version": "4.5.0",
+    "machines": {
+        "HMI Machine": {
+            "database": true,
+            "processes": [
+                {
+                    "name": "Utility.py",
+                    "cpu_threshold": 30,
+                    "memory_threshold": 200,
+                    "disk_threshold": 1
+                },
+                {
+                    "name": "gnome-shell",
+                    "cpu_threshold": 20,
+                    "memory_threshold": 500,
+                    "disk_threshold": 10
+                },
+                {
+                    "name": "firefox",
+                    "cpu_threshold": 50,
+                    "memory_threshold": 1000,
+                    "disk_threshold": 20
+                },
+                {
+                    "name": "python3",
+                    "cpu_threshold": 30,
+                    "memory_threshold": 500,
+                    "disk_threshold": 10
+                },
+                {
+                    "name": "code",
+                    "cpu_threshold": 40,
+                    "memory_threshold": 800,
+                    "disk_threshold": 15
+                }
+            ]
+        },
+        "Core Machine": {
+            "database": false,
+            "processes": [
+                {
+                    "name": "systemd",
+                    "cpu_threshold": 10,
+                    "memory_threshold": 100,
+                    "disk_threshold": 5
+                },
+                {
+                    "name": "NetworkManager",
+                    "cpu_threshold": 15,
+                    "memory_threshold": 100,
+                    "disk_threshold": 5
+                },
+                {
+                    "name": "dbus-daemon",
+                    "cpu_threshold": 10,
+                    "memory_threshold": 50,
+                    "disk_threshold": 5
+                },
+                {
+                    "name": "Xorg",
+                    "cpu_threshold": 30,
+                    "memory_threshold": 300,
+                    "disk_threshold": 10
+                },
+                {
+                    "name": "chrome",
+                    "cpu_threshold": 60,
+                    "memory_threshold": 1200,
+                    "disk_threshold": 25
+                }
+            ]
+        }
+    }
+}

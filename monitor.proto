@@ -1,0 +1,40 @@
+syntax = "proto3"; // version 3
+
+package monitor; // monitor namespace
+
+service SystemMonitor { // grpc service
+    rpc GetSystemStats (SystemRequest) returns (SystemStats);
+    rpc GetProcessStats (ProcessRequest) returns (ProcessStatsList);
+}
+
+message SystemRequest { // request
+    string machine_name = 1;
+}
+
+message SystemStats { // response
+    float total_cpu = 1;
+    float total_ram_used = 2;
+    float total_ram = 3;
+    float total_disk_io = 4;
+    float total_read = 5;
+    float total_write = 6;
+    int32 logical_cores = 7;
+}
+
+message ProcessRequest { // request
+    repeated string process_names = 1;
+}
+
+message ProcessStat { 
+    string name = 1;
+    bool running = 2;
+    float cpu = 3;
+    float memory_mb = 4;
+    float disk_io = 5;
+    float read_mb = 6;
+    float write_mb = 7;
+}
+
+message ProcessStatsList { // response
+    repeated ProcessStat processes = 1;  // multiple process retured
+}
