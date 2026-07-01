@@ -1,5 +1,6 @@
 # NGrid-Diagnostic-Utility
 Problem statement
+
 •	No unified view of service health across HMI and Core machines - teams relied on manual checks on each individual machine.
 •	No way to detect if a process is running, stopped, or degraded without logging in locally to each machine.
 •	No visibility into duplicate service instances or version mismatches across the two machines.
